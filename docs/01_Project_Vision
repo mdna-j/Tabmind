@@ -1,0 +1,270 @@
+# Tabmind Project Vision
+
+## 1. Project Overview
+
+Tabmind is a Chrome extension designed to help users save webpages while also preserving the reason they wanted to return to them.
+
+Browser tabs are often left open because users do not want to lose something they found useful. Over time, this can result in dozens of open tabs with little organization. Bookmarks provide a way to save webpages, but they usually only preserve information such as the page title and URL. This can make it difficult to remember why a page was important when returning to it days or weeks later.
+
+Tabmind is designed around preserving that missing context.
+
+When saving a webpage, users will be able to include a reason for saving it along with information such as tags, priority, and an optional reminder. Saved pages can then be managed through a dashboard where users can search, filter, reopen, complete, or delete them.
+
+Future versions of Tabmind may also use AI to generate summaries and help organize saved content, but AI is not required for the core functionality of the extension.
+
+## 2. Problem Statement
+
+People regularly find webpages they want to revisit later. Instead of dealing with them immediately, they often leave the tabs open so they do not forget about them.
+
+This creates several problems:
+
+- Large numbers of open tabs become difficult to manage.
+- Users forget why certain tabs were originally opened.
+- Important pages can become lost among unrelated tabs.
+- Bookmarks save the page but usually do not preserve the reason it was saved.
+- Pages that were supposed to be revisited at a certain time can easily be forgotten.
+- Finding previously saved information becomes harder as the number of saved pages grows.
+
+The main problem is not simply saving a URL. Browsers already provide bookmarks for that.
+
+The problem Tabmind focuses on is preserving the context and intent behind saving a webpage.
+
+For example, saving a GitHub repository only records where the repository is located. Tabmind could also record that the user saved it because they wanted to study how authentication was implemented before working on their own project.
+
+That additional context can make the saved page more useful when it is revisited later.
+
+## 3. Proposed Solution
+
+Tabmind will provide a simple way to save the current browser tab together with information that explains why it matters.
+
+When saving a tab, Tabmind will automatically capture basic page information such as:
+
+- Page title
+- URL
+- Date saved
+
+The user will then be able to add additional context such as:
+
+- Reason for saving the page
+- Tags
+- Priority
+- Optional reminder
+
+Saved tabs will be available through a dashboard that provides tools for organizing and managing them.
+
+The dashboard will allow users to:
+
+- View saved tabs
+- Search saved content
+- Filter saved tabs
+- Reopen webpages
+- Mark saved tabs as completed
+- Delete saved tabs
+- Identify tabs that have reminders or higher priority
+
+The first version will store this information locally in the browser so that Tabmind can work without requiring a user account or backend service.
+
+## 4. Target Users
+
+Tabmind is intended for people who frequently keep browser tabs open because they want to return to them later.
+
+Potential users include:
+
+### Students
+
+Students may save research papers, articles, course resources, documentation, or study material and record why each resource is useful.
+
+### Developers
+
+Developers frequently keep documentation, GitHub repositories, Stack Overflow discussions, tutorials, and technical articles open for future reference.
+
+Tabmind can help record what they wanted to learn or reuse from those resources.
+
+### Professionals
+
+Professionals may save articles, reports, tools, meeting resources, or research that they need to revisit for a project or upcoming task.
+
+### Researchers
+
+Users researching a topic may collect many webpages at once. Tags, reasons, and search can help organize those resources without keeping every page open.
+
+### General Browser Users
+
+Tabmind can also be useful for everyday browsing, such as saving products, recipes, travel ideas, videos, articles, or anything else a user wants to revisit later.
+
+## 5. Project Goals
+
+The primary goal of Tabmind is to make saved webpages easier to understand and revisit by preserving the user's original reason for saving them.
+
+### Core Goals
+
+1. **Preserve context**
+
+   Users should be able to record why a webpage was important when they save it.
+
+2. **Reduce tab clutter**
+
+   Users should feel comfortable closing a browser tab after saving it to Tabmind because they know they can find it again later.
+
+3. **Make saved content easy to find**
+
+   Search, tags, and filters should make it possible to find previously saved pages without manually searching through a large list.
+
+4. **Support time-sensitive content**
+
+   Optional reminders should allow users to save something they need to revisit at a specific time.
+
+5. **Keep the core experience simple**
+
+   Saving a tab should require very little effort. Advanced features should not make the basic save workflow unnecessarily complicated.
+
+6. **Work without AI**
+
+   AI may improve Tabmind in the future, but the extension should remain useful without an AI provider or internet-based AI service.
+
+7. **Build a maintainable foundation**
+
+   The project should separate user interface components, Chrome extension functionality, storage logic, and shared application logic so new features can be added without unnecessarily increasing complexity.
+
+## 6. Non-Goals
+
+The first version of Tabmind will intentionally have a limited scope.
+
+The initial version is not intended to provide:
+
+- User accounts
+- Cloud storage
+- Cross-device synchronization
+- Team collaboration
+- Shared collections
+- A standalone web application
+- Firefox support
+- Mobile applications
+- Advanced AI search
+- AI chat
+- Third-party productivity integrations
+
+These features may be considered later, but they are not required to prove the main idea behind Tabmind.
+
+The priority for the first version is creating a reliable experience for saving, organizing, and revisiting webpages.
+
+## 7. Core Features
+
+The first version of Tabmind is planned around several core features.
+
+### Save Current Tab
+
+Users will be able to save the currently active browser tab.
+
+Tabmind will automatically capture the page title and URL while allowing the user to provide a reason for saving it.
+
+### Reasons
+
+A reason will provide the context behind why a webpage was saved.
+
+For example:
+
+> Review how this project handles authentication before implementing login in my own project.
+
+The reason is one of the main pieces of information that separates Tabmind from a normal browser bookmark.
+
+### Tags
+
+Users will be able to assign tags to saved tabs to organize related content.
+
+Examples could include:
+
+- Development
+- Research
+- School
+- Work
+- Shopping
+- Travel
+
+### Priority
+
+Saved tabs can be assigned a priority to help users identify which pages are more important to revisit.
+
+Initial priority levels will include:
+
+- Low
+- Medium
+- High
+
+### Reminders
+
+Users will be able to optionally schedule a reminder for a saved tab.
+
+Chrome alarms and notifications will be used to notify the user when the reminder is triggered.
+
+### Dashboard
+
+The dashboard will provide a central location for managing saved tabs.
+
+Users will be able to view and manage their saved content without needing to keep the original browser tabs open.
+
+### Search and Filtering
+
+Users will be able to search and filter their saved tabs using information such as titles, reasons, tags, priorities, and completion status.
+
+### Completion
+
+Saved tabs can be marked as completed when the user no longer needs to actively revisit them.
+
+This allows users to keep a record of saved content without mixing completed items with active ones.
+
+## 8. Success Criteria
+
+The first version of Tabmind will be considered successful when a user can complete the following workflow reliably:
+
+1. Open a webpage they want to revisit later.
+2. Open Tabmind.
+3. Save the webpage with a reason.
+4. Close the original browser tab.
+5. Return to Tabmind at a later time.
+6. Find the saved page through the dashboard.
+7. Understand why the page was originally saved.
+8. Reopen the webpage when needed.
+9. Mark the saved item as completed or remove it when it is no longer needed.
+
+Additional indicators of a successful first version include:
+
+- Saved tabs persist after Chrome is restarted.
+- Search and filtering make saved content easy to find.
+- Reminders work even when the Tabmind popup is closed.
+- The extension remains usable without AI features.
+- Saving a page does not require unnecessary steps.
+- The extension handles invalid or missing data without losing saved information.
+
+The first version does not need every planned feature to prove the idea. The most important measure is whether saving the reason behind a webpage makes it easier to close tabs and successfully return to useful content later.
+
+## 9. Future Vision
+
+Once the core Tabmind experience is working reliably, the project can expand into more intelligent organization and cross-device features.
+
+Potential future features include:
+
+- AI-generated page summaries
+- AI-generated tag suggestions
+- Natural language search
+- Duplicate page detection
+- Tab collections
+- Bulk tab saving
+- Reminder snoozing
+- Weekly saved-tab summaries
+- Cross-device synchronization
+- User accounts
+- Shared collections
+- Bookmark importing
+- Firefox support
+- Integrations with productivity tools
+
+One possible future direction is allowing users to search their saved content using natural language.
+
+For example:
+
+> What was that GitHub project I saved because I wanted to learn about authentication?
+
+Instead of relying only on titles or URLs, Tabmind could use the context stored with each saved page to find the relevant result.
+
+These features are secondary to the main purpose of the project. Tabmind should first succeed at helping users remember why they saved something before expanding into a larger productivity platform.
